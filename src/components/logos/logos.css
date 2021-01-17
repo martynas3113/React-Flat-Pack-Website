@@ -1,0 +1,22 @@
+.logos-wrap {
+    display: flex;
+}
+.logos-left {
+    display: flex;
+    justify-content: flex-end;
+}
+.logos-right{
+    display: flex;
+    justify-content: flex-start;
+}
+
+@media (max-width: 990px) {
+    .logos-left {
+        
+        justify-content: center;
+    }
+    .logos-right{
+        
+        justify-content: center;
+    }
+}

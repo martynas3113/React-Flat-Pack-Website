@@ -1,0 +1,39 @@
+.footer-back{
+    background-color: #3f8de0;
+}
+
+.footer-container {
+    padding: 20px 0;
+}
+
+.footer-copy{
+    color: #9ec6e7;
+}
+
+    .footer-copy > p > span {
+        color: white;
+        font-weight: 600;
+    }
+.footer-icons{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+    .footer-icons > a> .fab {
+        margin-right: 10px;
+        color: white;
+        font-size: 18px;
+        opacity: 0.7;
+    }
+
+@media (max-width:990px){
+    .footer-icons{
+        
+        justify-content:center;
+        margin-top: 20px;
+    }
+    .footer-copy{
+        text-align: center;
+    }
+}

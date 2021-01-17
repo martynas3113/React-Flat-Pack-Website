@@ -1,14 +1,13 @@
+.reviews-container{
+    padding:40px 0px
+}
 .reviews-back{
     background-color:#58a6f9 ;
 }
 .reviews {
     text-align: center;
-    height: 400px;
+    /* height: 400px; */
 }
-
-    .reviews > img {
-        margin-top: 50px;
-    }
 
 .quotes {
     margin-top: 50px;

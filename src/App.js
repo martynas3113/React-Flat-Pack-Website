@@ -1,5 +1,6 @@
 
 import './App.css';
+import Footer from './components/footer/footer';
 import Header from './components/header/header';
 import Headlines from './components/headlines/headlines';
 import Hero from './components/hero/hero';
@@ -21,6 +22,7 @@ function App() {
       <JoinUs />
       <Logos />
       <Reviews />
+      <Footer />
     </div>
   );
 }

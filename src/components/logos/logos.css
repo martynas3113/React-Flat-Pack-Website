@@ -1,3 +1,7 @@
+.logos-container {
+    padding:20px 0px
+}
+
 .logos-wrap {
     display: flex;
 }

@@ -9,7 +9,7 @@ import logo from '../img/logo.png'
         return (
             <div className="header-line">
             <Container  className="head-container">
-               <Row  classNam="head-wrap">
+               <Row  className="head-wrap">
                    <Col  className="head-left">
                      <img src={logo} alt="LOGO"/>
                    </Col>

@@ -1,6 +1,9 @@
+.headlines-back {
+    background-color: #f6f6f6;
+}
+
 .headlines-container {
     min-height: 200px;
-    background-color: #f6f6f6;
 }
 
 .headline-left{

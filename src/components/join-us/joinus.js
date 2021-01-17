@@ -9,7 +9,7 @@ class JoinUs extends Component {
             
             <Container  className="join-container">
                 <Row className="join-wrap">
-                    <Col lg={8}  className="join-left">
+                    <Col lg={8} md={12}  className="join-left">
                         <div className="feature">
                             <div className="feature-img">
                                 <img src={image} alt=""/>

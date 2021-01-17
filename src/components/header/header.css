@@ -1,8 +1,12 @@
+.header-line {
+    border-bottom: 2px solid #c9c9c9;
+
+}
+
 .head-container {
     padding: 20px ;
     background-color: white;
-    border-bottom: 2px solid #c9c9c9;
-
+    
 }
 .head-left {
     display: flex;

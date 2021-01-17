@@ -1,18 +1,19 @@
-.testim-container{
-    padding: 40px;
+.testim-container {
+    padding: 40px 0px
 }
 .testim-wrap{
     margin-top: 100px;
     display: flex;
     
+    
 }
-
-    .testim-card {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
+.testim-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
         
-    }
+}
 
 .test-img> img {
     border-radius: 50%;
@@ -47,3 +48,9 @@
             background-color: rgb(40, 107, 189);
             cursor: pointer;
         }
+@media (max-width:990px){
+    .testim-card {
+        margin-top: 30px;
+            
+    }
+}

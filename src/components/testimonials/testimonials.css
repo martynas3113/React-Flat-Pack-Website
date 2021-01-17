@@ -1,0 +1,47 @@
+
+.testim-wrap{
+    margin-top: 100px;
+    display: flex;
+    
+}
+
+    .testim-card {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+
+.test-img> img {
+    border-radius: 50%;
+    
+}
+
+.test-text {
+    margin-top: 20px;
+}
+    .test-text > h4 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .test-text > p {
+        margin-top: 20px;
+        color: #808080;
+    }
+.test-btn{
+    margin-top: 20px;
+}
+
+    .test-btn > span{
+    
+        padding: 10px 25px;
+        background-color: rgb(89, 163, 252);
+        color: white;
+        border-radius: 5px;
+        transition: all 0.3s;
+    }
+        .test-btn > span:hover {
+            background-color: rgb(40, 107, 189);
+            cursor: pointer;
+        }

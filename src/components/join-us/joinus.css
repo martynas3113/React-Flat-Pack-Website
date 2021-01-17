@@ -1,0 +1,90 @@
+.join-container {
+    padding: 40px;
+}
+
+.feature{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    justify-content: flex-end;
+}
+
+    .feature > .feature-img {
+        padding-right: 40px;
+
+    }
+.join-left {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.join-form-wrap{
+    background-color: #ebeaea;
+    display: flex;
+    flex-direction: column;
+    padding:30px;
+    width:300px;
+    border-radius: 10px;
+    height: 400px;
+}
+
+.join-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.join-form {
+    display: flex;
+    flex-direction: column;
+}
+
+    .join-form > input {
+        margin-top: 20px;
+        height: 40px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        color: black;
+    }
+        .join-form > input::placeholder{
+            color: black;
+            padding-left: 10px;
+        }
+
+    .join-btn {
+        margin-top: 30px;
+    
+        
+    }
+        .join-btn > a {
+            padding: 10px 20px;
+            background-color: rgb(89, 163, 252);;
+            text-decoration: none;
+            color: white;
+            border-radius: 7px;
+            transition: all 0.3s ease-in-out;
+            
+        }
+
+            .join-btn > a:hover{
+                background-color: rgb(40, 107, 189);
+                cursor: pointer;
+            }
+
+@media (max-width:990px){
+    .feature{
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .join-right {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+}

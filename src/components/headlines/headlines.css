@@ -1,0 +1,44 @@
+.headlines-container {
+    min-height: 200px;
+    background-color: #c9c9c9;
+}
+
+.headline-left{
+    display: flex;
+    flex-direction: column;
+}
+    .headline-left > h3 {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .headline-left > p {
+        margin-top: 10px;
+    }
+    .headline-left > a {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    
+
+.headline-right {
+    display: flex;
+    flex-direction: column;
+    
+}
+    .headline-right > h3 {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .headline-right > p {
+        margin-top: 10px;
+    }
+    .headline-right > a {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: 700;
+}

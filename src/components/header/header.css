@@ -1,5 +1,5 @@
 .head-container {
-    padding: 20px 0px;
+    padding: 20px ;
     background-color: white;
     border-bottom: 2px solid #c9c9c9;
 
@@ -23,9 +23,14 @@
     .head-right a {
         font-size: 18px;
         padding: 26px 21px;
-        font-weight: 500;
+        font-weight: 600;
         text-decoration: none;
         color: #7f7f7f;
+        transition: all 0.3s;
+        }
+
+        .head-right a:hover {
+            opacity: 0.7;
         }
 
 .head-btn > a {

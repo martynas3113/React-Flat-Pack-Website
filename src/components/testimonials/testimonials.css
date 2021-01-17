@@ -1,4 +1,6 @@
-
+.testim-container{
+    padding: 40px;
+}
 .testim-wrap{
     margin-top: 100px;
     display: flex;

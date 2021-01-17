@@ -10,10 +10,13 @@ import logo from '../img/logo.png'
             <div className="header-line">
             <Container  className="head-container">
                <Row  className="head-wrap">
-                   <Col  className="head-left">
+                   <Col lg={6} md={6} sm={12} className="head-left">
                      <img src={logo} alt="LOGO"/>
                    </Col>
-                   <Col className="head-right">
+                   <Col md={6} sm={12} className="hamburger-container">
+                   <div  className="hamburger"><i className="fas fa-bars"></i></div>
+                   </Col>
+                   <Col lg={6}  className="head-right">
                         <li>
                             <a href="#">Home</a>
                         </li>
@@ -26,6 +29,7 @@ import logo from '../img/logo.png'
                         <li className="head-btn">
                             <a href="#">Buy Now</a>
                         </li>
+                        
                    </Col>
                </Row>
             </Container>

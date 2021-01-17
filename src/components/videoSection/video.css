@@ -1,0 +1,28 @@
+.video-container {
+    background-color: blue;
+    padding: 40px;
+    background-color: #f6f6f6;
+}
+
+.video-wrap {
+    margin-top: 50px;
+}
+
+.video-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    .video-left > h3 {
+        font-size: 30px;
+        font-weight: bold;
+        
+    }
+    .video-left > p {
+        margin-top: 20px;
+    }
+
+    
+
+    

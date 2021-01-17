@@ -9,7 +9,7 @@ import logo from '../img/logo.png'
         return (
             <Container fluid className="head-container">
                <Row  classNam="head-wrap">
-                   <Col className="head-left">
+                   <Col  className="head-left">
                      <img src={logo} alt="LOGO"/>
                    </Col>
                    <Col className="head-right">

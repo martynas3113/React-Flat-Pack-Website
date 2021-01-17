@@ -4,6 +4,7 @@ import Header from './components/header/header';
 import Headlines from './components/headlines/headlines';
 import Hero from './components/hero/hero';
 import Testimonials from './components/testimonials/testimonials';
+import Video from './components/videoSection/video';
   
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Hero />
       <Headlines />
       <Testimonials />
+      <Video />
     </div>
   );
 }

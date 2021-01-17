@@ -1,4 +1,4 @@
-import  Button  from 'react-bootstrap/Button';
+
 import React, { Component } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import './header.css';
@@ -7,7 +7,8 @@ import logo from '../img/logo.png'
  class Header extends Component {
     render() {
         return (
-            <Container fluid className="head-container">
+            <div className="header-line">
+            <Container  className="head-container">
                <Row  classNam="head-wrap">
                    <Col  className="head-left">
                      <img src={logo} alt="LOGO"/>
@@ -28,6 +29,8 @@ import logo from '../img/logo.png'
                    </Col>
                </Row>
             </Container>
+            </div>
+
         )
     }
 }

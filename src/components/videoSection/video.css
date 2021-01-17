@@ -1,7 +1,10 @@
-.video-container {
-    background-color: blue;
-    padding: 40px;
+.video-back {
     background-color: #f6f6f6;
+}
+
+.video-container {
+    padding: 40px;
+    
 }
 
 .video-wrap {
@@ -23,6 +26,15 @@
         margin-top: 20px;
     }
 
+    @media (max-width:990px){
+        .video-wrap {
+            text-align: center;
+        }
+        .video-right {
+            margin-top: 30px;
+        }
+
+    }
     
 
     

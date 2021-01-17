@@ -35,6 +35,12 @@
         }
 
     }
+
+    @media (max-width:580px){
+        .video {
+            width: 300px;
+        }
+    }
     
 
     

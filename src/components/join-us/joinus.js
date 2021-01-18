@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import './joinus.css';
-import image from '../img/feature-1.png';
-import { feature, feature2, feature3 } from './joinData'
+import { feature, feature2, feature3 } from './joinData';
 
 class JoinUs extends Component {
     constructor(props){

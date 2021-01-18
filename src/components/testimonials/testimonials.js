@@ -6,7 +6,7 @@ import './testimonials.css'
 class Testimonials extends Component {
     render() {
         return (
-            <Container className="testim-container">
+            <Container id="work" className="testim-container">
                 <Row className="testim-wrap">
                     <Col lg={4} md={12}  className="testim-card">
                        <div className="test-img">

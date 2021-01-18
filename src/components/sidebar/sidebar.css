@@ -1,0 +1,22 @@
+
+.sidebar-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+    display: grid;
+    align-items: center;
+    top:-100%;
+    left:0;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    background-color: black;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+}
+

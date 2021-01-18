@@ -16,7 +16,7 @@ import { Link } from 'react-scroll';
 
      openSide(){
          this.setState(curState => ({
-             isOpen: (curState.isOpen === false ? true : false)
+             isOpen: !curState.isOpen
          }))
      }
 

@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
-import image from '../img/service-2.png';
+import React, { Component } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
 import './testimonials.css';
 import { testimData,testimData2,testimData3 } from './data.js';
 

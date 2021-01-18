@@ -5,7 +5,7 @@ import './hero.css'
 class Hero extends Component {
     render() {
         return (
-            <Container fluid className="hero-container">
+            <Container id="home" fluid className="hero-container">
                 <Row className="hero-wrap">
                     <Col className="hero-content">
                         <div className="title">

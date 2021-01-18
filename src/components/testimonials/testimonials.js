@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import './testimonials.css';
 import { testimData,testimData2,testimData3 } from './data.js';
+import shortid from 'shortid';
 
 class Testimonials extends Component {
     constructor(props){
@@ -12,7 +13,7 @@ class Testimonials extends Component {
         return (
             <Container id="work" className="testim-container">
                 <Row className="testim-wrap">
-                    {this.state.data.map(card =><Col lg={4} md={12}  className="testim-card">
+                    {this.state.data.map(card =><Col key={shortid.generate()}lg={4} md={12}  className="testim-card">
                        <div className="test-img">
                            <img src={card.img} alt=""/>
                        </div>

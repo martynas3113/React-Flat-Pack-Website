@@ -22,7 +22,7 @@ class Reviews extends Component {
           if(this.state.index >= this.state.web.length){
             this.setState({ index: 0 });
           }
-        }, 6000);
+        }, 5000);
       }
     
       componentWillUnmount() {

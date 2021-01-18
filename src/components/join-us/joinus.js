@@ -7,7 +7,7 @@ class JoinUs extends Component {
     render() {
         return (
             
-            <Container  className="join-container">
+            <Container id="contact" className="join-container">
                 <Row className="join-wrap">
                     <Col lg={8} md={12}  className="join-left">
                         <div className="feature">

@@ -25,6 +25,7 @@
     justify-content: center;
     list-style:none; 
     align-items: center;
+    color: #7f7f7f;
 }
     
 
@@ -39,19 +40,20 @@
 
         .head-right a:hover {
             opacity: 0.7;
+            cursor: pointer;
         }
 
-.head-btn > a {
-    padding:10px 15px;
-    background-color: #58a6f9;
-    border-radius: 5px;
-    color: white;
-    margin-left: 15px;
-    transition: all 0.3s ease-in;
-}
-    .head-btn > a:hover {
-       opacity: 0.6; 
+    .head-btn > a {
+        padding:10px 15px;
+        background-color: #58a6f9;
+        border-radius: 5px;
+        color: white;
+        margin-left: 15px;
+        transition: all 0.3s ease-in;
     }
+        .head-btn > a:hover {
+        opacity: 0.6; 
+        }
 
 
 @media (max-width:992px){

@@ -4,6 +4,8 @@ import { Col, Container, Row } from 'react-bootstrap';
 import './header.css';
 import logo from '../img/logo.png'
 import Sidebar from '../sidebar/sidebar';
+import { Link } from 'react-scroll';
+
 
  class Header extends Component {
      constructor(props){
@@ -17,6 +19,7 @@ import Sidebar from '../sidebar/sidebar';
              isOpen: (curState.isOpen === false ? true : false)
          }))
      }
+
     render() {
         return (
             <div className="header-line">
@@ -31,13 +34,13 @@ import Sidebar from '../sidebar/sidebar';
                    </Col>
                    <Col lg={6}  className="head-right">
                         <li>
-                            <a href="#">Home</a>
+                            <Link>Home</Link>
                         </li>
                         <li>
-                            <a href="#">Work</a>
+                            <Link to="work" smooth={true} duration={500}>Work</Link>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <Link to="contact" smooth={true} offset={-200} duration={500}>Contact Us</Link>
                         </li>
                         <li className="head-btn">
                             <a href="#">Buy Now</a>

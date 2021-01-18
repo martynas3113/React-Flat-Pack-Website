@@ -1,10 +1,36 @@
 import React, { Component } from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import quotes from '../img/quotes.png';
-import './reviews.css'
+import './reviews.css';
+import { reviewsData } from './reviewsData';
 
 class Reviews extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            index: 0,
+            review: reviewsData.reviews,
+            web: reviewsData.webpage,
+            via: reviewsData.via
+        }
+    }
+
+    componentDidMount() {
+        this.timeout = setInterval(() => {
+          let currentId = this.state.index;
+          this.setState({ index: currentId + 1 });
+          if(this.state.index >= this.state.web.length){
+            this.setState({ index: 0 });
+          }
+        }, 5000);
+      }
+    
+      componentWillUnmount() {
+        clearInterval(this.timeout);
+      }   
+
     render() {
+        let change = this.state.index;
         return (
             <div className="reviews-back">
                 <Container className="reviews-container">
@@ -12,19 +38,18 @@ class Reviews extends Component {
                         <Col className="reviews">
                             <img src={quotes} alt="LOGO"/>
                             <div className="quotes">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ab voluptatem vel nihil sint numquam.</p>
-                            
+                            <p>{this.state.review[change]}</p>
                             <div className="web-site">
                             <div className="dots">
                                 <span className="dot"></span>
                                 <span className="dot"></span>
                                 <span className="dot"></span>
                             </div>
-                                <h5>WebPage</h5>
-                                <p>via WebPage</p>
+                                <h5>{this.state.web[change]}</h5>
+                                <p>{this.state.via[change]}</p>
                             </div>
                             </div>
-                        </Col>
+                        </Col> 
                     </Row>
                 </Container>
             </div>

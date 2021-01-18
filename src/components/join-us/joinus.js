@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import './joinus.css';
 import { feature, feature2, feature3 } from './joinData';
+import shortid from 'shortid';
 
 class JoinUs extends Component {
     constructor(props){
@@ -14,7 +15,7 @@ class JoinUs extends Component {
             <Container id="contact" className="join-container">
                 <Row className="join-wrap">
                     <Col lg={8} md={12}  className="join-left">
-                        {this.state.features.map(feature => <div className="feature">
+                        {this.state.features.map(feature => <div key={shortid.generate()} className="feature">
                             <div className="feature-img">
                                 <img src={feature.img} alt=""/>
                             </div>

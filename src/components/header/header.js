@@ -34,7 +34,7 @@ import { Link } from 'react-scroll';
                    </Col>
                    <Col lg={6}  className="head-right">
                         <li>
-                            <Link>Home</Link>
+                            <Link to="home" >Home</Link>
                         </li>
                         <li>
                             <Link to="work" smooth={true} duration={500}>Work</Link>

@@ -25,7 +25,7 @@ class Sidebar extends Component {
                         <div className="sidebar-close"><i onClick={toggleSide} className="fas fa-times"></i></div>
                         <Col className="sidebar-menu">
                         <li>
-                            <Link onClick={toggleSide}>Home</Link>
+                            <Link to="home" smooth={true} duration={500} onClick={toggleSide}>Home</Link>
                         </li>
                         <li>
                             <Link onClick={toggleSide} to="work" smooth={true} duration={500}>Work</Link>

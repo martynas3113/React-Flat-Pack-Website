@@ -6,7 +6,6 @@
 }
 .reviews {
     text-align: center;
-    /* height: 400px; */
 }
 
 .quotes {
@@ -16,6 +15,7 @@
 .quotes > p {
     font-size: 30px;
     color: white;
+    transition: all 2s ease-in-out;
 }
 
 .dots {

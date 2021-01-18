@@ -1,42 +1,27 @@
 import React, { Component } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import image from '../img/service-2.png';
-import './testimonials.css'
+import './testimonials.css';
+import { testimData,testimData2,testimData3 } from './data.js';
 
 class Testimonials extends Component {
+    constructor(props){
+        super(props)
+        this.state ={data: [testimData,testimData2,testimData3]}
+    }
     render() {
         return (
             <Container id="work" className="testim-container">
                 <Row className="testim-wrap">
-                    <Col lg={4} md={12}  className="testim-card">
+                    {this.state.data.map(card =><Col lg={4} md={12}  className="testim-card">
                        <div className="test-img">
-                           <img src={image} alt=""/>
+                           <img src={card.img} alt=""/>
                        </div>
                        <div className="test-text">
-                            <h4>Fitness Activities</h4>
-                            <p>Lorem ipsum, dolor sit amet<br/> consectetur adipisicing elit. Optio, voluptas.</p></div>
+                            <h4>{card.title}</h4>
+                            <p>{card.subtitle}<br/> consectetur adipisicing elit. Optio, voluptas.</p></div>
                        <div className="test-btn"><span>Join Now</span></div> 
-                    </Col>
-                    <Col lg={4} md={12} className="testim-card">
-                       <div className="test-img">
-                           <img src={image} alt=""/>
-                       </div>
-                       <div className="test-text">
-                            <h4>Fitness Activities</h4>
-                            <p>Lorem ipsum, dolor sit amet<br/> consectetur adipisicing elit. Optio, voluptas.</p>
-                       </div>
-                       <div className="test-btn"><span>Join Now</span></div> 
-                    </Col>
-                    <Col lg={4} md={12} className="testim-card">
-                       <div className="test-img">
-                           <img src={image} alt=""/>
-                       </div>
-                       <div className="test-text">
-                           <h4>Fitness Activities</h4>
-                            <p>Lorem ipsum, dolor sit amet<br/> consectetur adipisicing elit. Optio, voluptas.</p></div>
-                       <div className="test-btn"><span>Join Now</span></div> 
-                    </Col>
-                    
+                    </Col>  )}       
                 </Row>
             </Container>
         )

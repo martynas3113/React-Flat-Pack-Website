@@ -3,7 +3,7 @@
 }
 
 .headlines-container {
-    min-height: 200px;
+   padding: 20px;
 }
 
 .headline-left{
@@ -11,7 +11,7 @@
     flex-direction: column;
 }
     .headline-left > h3 {
-        margin-top: 20px;
+        
         font-size: 20px;
         font-weight: bold;
     }
@@ -33,7 +33,7 @@
     
 }
     .headline-right > h3 {
-        margin-top: 20px;
+        
         font-size: 20px;
         font-weight: bold;
     }

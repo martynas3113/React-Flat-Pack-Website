@@ -3,8 +3,20 @@ import React, { Component } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import './header.css';
 import logo from '../img/logo.png'
+import Sidebar from '../sidebar/sidebar';
 
  class Header extends Component {
+     constructor(props){
+         super(props)
+         this.state = { isOpen: false }
+         this.openSide = this.openSide.bind(this);
+     }
+
+     openSide(){
+         this.setState(curState => ({
+             isOpen: (curState.isOpen === false ? true : false)
+         }))
+     }
     render() {
         return (
             <div className="header-line">
@@ -14,7 +26,8 @@ import logo from '../img/logo.png'
                      <img src={logo} alt="LOGO"/>
                    </Col>
                    <Col md={6} sm={12} className="hamburger-container">
-                   <div  className="hamburger"><i className="fas fa-bars"></i></div>
+                   <div className="hamburger"><i onClick={this.openSide} className="fas fa-bars"></i></div>
+                   <Sidebar click={() => this.openSide()} isOpen={this.state.isOpen} />
                    </Col>
                    <Col lg={6}  className="head-right">
                         <li>

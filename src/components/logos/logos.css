@@ -13,6 +13,14 @@
     display: flex;
     justify-content: flex-start;
 }
+.logos-left > img {
+    width: 70%;
+    
+}
+.logos-right > img{
+    
+    width: 70%;
+}
 
 @media (max-width: 990px) {
     .logos-left {

@@ -12,8 +12,9 @@ class Sidebar extends Component {
         const marTop = this.props.isOpen ? 0 : -100;
         return (
             // <div className="sidebar-back">
-                <Container onClick={this.props.click} fluid style={{opacity: elemOpacity, top:`${marTop}%` }} className="sidebar-container">
+                <Container fluid style={{opacity: elemOpacity, top:`${marTop}%` }} className="sidebar-container">
                     <Row className="sidebar-wrapper">
+                        <div className="sidebar-close"><i onClick={this.props.click} class="fas fa-times"></i></div>
                         <Col className="sidebar-menu">
                         <li>
                             <a href="#">Home</a>

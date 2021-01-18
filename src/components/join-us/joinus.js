@@ -2,41 +2,28 @@ import React, { Component } from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import './joinus.css';
 import image from '../img/feature-1.png';
+import { feature, feature2, feature3 } from './joinData'
 
 class JoinUs extends Component {
+    constructor(props){
+        super(props)
+        this.state ={features:[feature,feature2,feature3]}
+    }
     render() {
         return (
             
             <Container id="contact" className="join-container">
                 <Row className="join-wrap">
                     <Col lg={8} md={12}  className="join-left">
-                        <div className="feature">
+                        {this.state.features.map(feature => <div className="feature">
                             <div className="feature-img">
-                                <img src={image} alt=""/>
+                                <img src={feature.img} alt=""/>
                             </div>
                             <div className="feature-text">
-                                <h3>Feature</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, minus!</p>
+                                <h3>{feature.title}</h3>
+                                <p>{feature.subtitle}</p>
                             </div>
-                        </div>
-                        <div className="feature">
-                            <div className="feature-img">
-                                <img src={image} alt=""/>
-                            </div>
-                            <div className="feature-text">
-                                <h3>Feature</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, minus!</p>
-                            </div>
-                        </div>
-                        <div className="feature">
-                            <div className="feature-img">
-                                <img src={image} alt=""/>
-                            </div>
-                            <div className="feature-text">
-                                <h3>Feature</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, minus!</p>
-                            </div>
-                        </div>
+                        </div>)}
                     </Col>
                     <Col lg={4} md={12}  className="join-right">
                         <div className="join-form-wrap">

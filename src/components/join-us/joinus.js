@@ -26,7 +26,9 @@ class JoinUs extends Component {
         })
     }
 
-    validateForm(name){
+    validateForm(name,email,number){
+        const emailValid = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+[^<>()\.,;:\s@\"]{2,})$/;
+        
         const nameString = name.split("");
     const nameLength = name.split("").length;
     if(nameLength < 2){
@@ -43,6 +45,34 @@ class JoinUs extends Component {
         })
     }
 
+    else if(nameString[0]!== nameString[0].toUpperCase()){
+        this.setState({
+            errorText: `First name letter should be uppercase`,
+            error: true
+        })
+    }
+//Just basic Email validation, email validation should be made on server side too because You can easily turn off JavaScript off
+    else if(!emailValid.test(email)){
+        this.setState({
+            errorText: `This email address is not valid`,
+            error: true
+        })
+    }
+
+    else if(number.split("")[0]!== "+"){
+            this.setState({
+                errorText: `Number should start with + sign`,
+                error: true
+            })
+    }
+
+    else if(!number.match(/^\d{10}/)){
+        this.setState({
+            errorText: `Number does not match format`,
+            error: true
+        })
+}
+
     else{
         this.setState({
             errorText: '',
@@ -53,8 +83,7 @@ class JoinUs extends Component {
 
     submit(evt){
         evt.preventDefault();
-        this.validateForm(this.state.fullname);
-    
+        this.validateForm(this.state.fullname, this.state.email,this.state.number);    
     }
     render() {
         const errorShow = this.state.error ? 'block' : 'none';

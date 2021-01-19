@@ -31,6 +31,8 @@ class JoinUs extends Component {
         
         const nameString = name.split("");
     const nameLength = name.split("").length;
+
+    //Validates name length, first uppercase letter
     if(nameLength < 2){
         this.setState({
             errorText: `Name can't be shorter than 2 symbols`,
@@ -65,7 +67,7 @@ class JoinUs extends Component {
                 error: true
             })
     }
-
+    //Validate only 10 digits format. Without symbols
     else if(!number.match(/^\d{10}/)){
         this.setState({
             errorText: `Number does not match format`,
@@ -111,7 +113,7 @@ class JoinUs extends Component {
                            <form onSubmit={this.submit} className="join-form">
                                 <input type="text" onChange={this.change} value={this.state.fullname} name="fullname" id="name" placeholder="Your Full Name"/>
                                 <input type="email" onChange={this.change}  value={this.state.email} name="email" id="email" placeholder="Your Email"/>
-                                <input type="text" onChange={this.change} value={this.state.number } name="number" id="number" placeholder="+1111111111"/>
+                                <input type="text" onChange={this.change} value={this.state.number } name="number" id="number" placeholder="Your Phone Number"/>
                                 <div className="join-btn">
                                 <button>Send Information </button>   
                             </div>

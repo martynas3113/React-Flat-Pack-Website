@@ -22,7 +22,7 @@ class Reviews extends Component {
           if(this.state.index >= this.state.web.length){
             this.setState({ index: 0 });
           }
-        }, 5000);
+        }, 4000);
       }
     
       componentWillUnmount() {
@@ -46,7 +46,7 @@ class Reviews extends Component {
                                 <span className="dot"></span>
                             </div>
                                 <h5>{this.state.web[change]}</h5>
-                                <p>{this.state.via[change]}</p>
+                                <p>via {this.state.via[change]}</p>
                             </div>
                             </div>
                         </Col> 

@@ -7,11 +7,36 @@ import shortid from 'shortid';
 class JoinUs extends Component {
     constructor(props){
         super(props)
-        this.state ={features:[feature,feature2,feature3]}
+        this.state ={
+            error: false,
+            errorText : '',
+            features:[feature,feature2,feature3],
+            fullname: '',
+            email: '',
+            number: ''
+        }
+        this.change=this.change.bind(this);
+        this.submit=this.submit.bind(this);
+    }
+
+    change(evt){
+        this.setState({
+            [evt.target.name] : evt.target.value
+        })
+    }
+
+    submit(evt){
+        evt.preventDefault();
+        if(this.state.fullname.split("").length < 3){
+            this.setState({errorText: 'NoNoNo'})
+        }
+        else{
+
+            this.setState({errorText: ''})
+        }
     }
     render() {
-        return (
-            
+        return ( 
             <Container id="contact" className="join-container">
                 <Row className="join-wrap">
                     <Col lg={8} md={12}  className="join-left">
@@ -31,14 +56,16 @@ class JoinUs extends Component {
                            <br/>
                            <p>Lorem ipsum dolor sit.</p>
                            <br/>
-                           <div className="join-form">
-                                <input type="text" name="name" id="name" placeholder="Your Full Name"/>
-                                <input type="email" name="email" id="email" placeholder="Your Email"/>
-                                <input type="text" name="number" id="number" placeholder="Your Phone Number"/>
+                           <div className="Error">{this.state.errorText}</div>
+                           <form onSubmit={this.submit} className="join-form">
+                                <input type="text" onChange={this.change} value={this.state.fullname} name="fullname" id="name" placeholder="Your Full Name"/>
+                                <input type="email" onChange={this.change}  value={this.state.email} name="email" id="email" placeholder="Your Email"/>
+                                <input type="text" onChange={this.change} value={this.state.number } name="number" id="number" placeholder="Your Phone Number"/>
+                                <div className="join-btn">
+                                <button>Send Information </button>   
                             </div>
-                            <div className="join-btn">
-                                <a href="#">Send Information</a>    
-                            </div>
+                            </form>
+                            
                             
                         </div>
                     </Col>

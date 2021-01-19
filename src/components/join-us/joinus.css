@@ -58,7 +58,7 @@
         color: black;
     }
         .join-form > input::placeholder{
-            color: black;
+            color: #9c9797;
             padding-left: 10px;
         }
 

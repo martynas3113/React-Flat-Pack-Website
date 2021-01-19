@@ -111,7 +111,7 @@ class JoinUs extends Component {
                            <form onSubmit={this.submit} className="join-form">
                                 <input type="text" onChange={this.change} value={this.state.fullname} name="fullname" id="name" placeholder="Your Full Name"/>
                                 <input type="email" onChange={this.change}  value={this.state.email} name="email" id="email" placeholder="Your Email"/>
-                                <input type="text" onChange={this.change} value={this.state.number } name="number" id="number" placeholder="Your Phone Number"/>
+                                <input type="text" onChange={this.change} value={this.state.number } name="number" id="number" placeholder="+1111111111"/>
                                 <div className="join-btn">
                                 <button>Send Information </button>   
                             </div>

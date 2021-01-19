@@ -4,6 +4,7 @@ import './joinus.css';
 import { feature, feature2, feature3 } from './joinData';
 import shortid from 'shortid';
 
+
 class JoinUs extends Component {
     constructor(props){
         super(props)
@@ -25,17 +26,38 @@ class JoinUs extends Component {
         })
     }
 
+    validateForm(name){
+        const nameString = name.split("");
+    const nameLength = name.split("").length;
+    if(nameLength < 2){
+        this.setState({
+            errorText: `Name can't be shorter than 2 symbols`,
+            error: true
+        })
+    }
+
+    else if( nameLength > 50){
+        this.setState({
+            errorText: `Name can't be longer than 50 symbols`,
+            error: true
+        })
+    }
+
+    else{
+        this.setState({
+            errorText: '',
+            error: false
+        })
+    }
+}
+
     submit(evt){
         evt.preventDefault();
-        if(this.state.fullname.split("").length < 3){
-            this.setState({errorText: 'NoNoNo'})
-        }
-        else{
-
-            this.setState({errorText: ''})
-        }
+        this.validateForm(this.state.fullname);
+    
     }
     render() {
+        const errorShow = this.state.error ? 'block' : 'none';
         return ( 
             <Container id="contact" className="join-container">
                 <Row className="join-wrap">
@@ -56,7 +78,7 @@ class JoinUs extends Component {
                            <br/>
                            <p>Lorem ipsum dolor sit.</p>
                            <br/>
-                           <div className="Error">{this.state.errorText}</div>
+                           <div style={{display: errorShow}} className="error">{this.state.errorText}</div>
                            <form onSubmit={this.submit} className="join-form">
                                 <input type="text" onChange={this.change} value={this.state.fullname} name="fullname" id="name" placeholder="Your Full Name"/>
                                 <input type="email" onChange={this.change}  value={this.state.email} name="email" id="email" placeholder="Your Email"/>

@@ -26,7 +26,7 @@
     padding:30px;
     width:300px;
     border-radius: 10px;
-    height: 400px;
+    max-height: 500px;
 }
 
 .join-right {
@@ -37,6 +37,16 @@
 .join-form {
     display: flex;
     flex-direction: column;
+}
+
+.error {
+    font-size: 13px;
+    border: 1px solid #ffc8cb;
+    background-color:#ffdee0 ;
+    border-radius: 5px;
+    padding: 10px 5px;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
 }
 
     .join-form > input {

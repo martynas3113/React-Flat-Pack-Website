@@ -9,4 +9,4 @@ Page is created using React.js for educational purposes. <br>
 - Cycling reviews every 4 seconds
 - Validated form with error message
 
-[FlatPack :](https://flatpack55.netlify.app/)
+Web page published at : [FlatPack](https://flatpack55.netlify.app/)

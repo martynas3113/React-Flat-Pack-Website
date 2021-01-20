@@ -1,6 +1,5 @@
 .header-line {
     border-bottom: 2px solid #c9c9c9;
-
 }
 
 .hamburger-container {
@@ -13,6 +12,7 @@
     
 }
 .head-left {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-self: center;
@@ -21,6 +21,7 @@
 }
 
 .head-right {
+    width: 100%;
     display: inline-flex;
     justify-content: center;
     list-style:none; 
@@ -57,6 +58,11 @@
 
 
 @media (max-width:992px){
+    .head-container {
+        padding:0px ;
+        padding-top: 20px;
+    }
+    
     .head-wrap{
         align-content: center;
     }
@@ -79,6 +85,8 @@
 @media (max-width:768px){
     .hamburger-container {
         justify-content: center;
-        margin-top: 20px;
+    }
+    .head-left {
+        padding-left: 50px
     }
 }

@@ -25,10 +25,10 @@ import { Link } from 'react-scroll';
             <div className="header-line">
             <Container  className="head-container">
                <Row  className="head-wrap">
-                   <Col lg={6} md={6} sm={12} className="head-left">
+                   <Col lg={6} md={6} sm={6} xs={6} className="head-left">
                      <img src={logo} alt="LOGO"/>
                    </Col>
-                   <Col md={6} sm={12} className="hamburger-container">
+                   <Col md={6} sm={6} xs={6} className="hamburger-container">
                    <div className="hamburger"><i onClick={this.openSide} className="fas fa-bars"></i></div>
                    <Sidebar click={() => this.openSide()} isOpen={this.state.isOpen} />
                    </Col>

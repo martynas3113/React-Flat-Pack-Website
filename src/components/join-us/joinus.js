@@ -4,14 +4,92 @@ import './joinus.css';
 import { feature, feature2, feature3 } from './joinData';
 import shortid from 'shortid';
 
+
 class JoinUs extends Component {
     constructor(props){
         super(props)
-        this.state ={features:[feature,feature2,feature3]}
+        this.state ={
+            error: false,
+            errorText : '',
+            features:[feature,feature2,feature3],
+            fullname: '',
+            email: '',
+            number: ''
+        }
+        this.change=this.change.bind(this);
+        this.submit=this.submit.bind(this);
+    }
+
+    change(evt){
+        this.setState({
+            [evt.target.name] : evt.target.value
+        })
+    }
+
+    validateForm(name,email,number){
+        const emailValid = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+[^<>()\.,;:\s@\"]{2,})$/;
+        
+        const nameString = name.split("");
+    const nameLength = name.split("").length;
+
+    //Validates name length, first uppercase letter
+    if(nameLength < 2){
+        this.setState({
+            errorText: `Name can't be shorter than 2 symbols`,
+            error: true
+        })
+    }
+
+    else if( nameLength > 50){
+        this.setState({
+            errorText: `Name can't be longer than 50 symbols`,
+            error: true
+        })
+    }
+
+    else if(nameString[0]!== nameString[0].toUpperCase()){
+        this.setState({
+            errorText: `First name letter should be uppercase`,
+            error: true
+        })
+    }
+//Just basic Email validation, email validation should be made on server side too because You can easily turn off JavaScript off
+    else if(!emailValid.test(email)){
+        this.setState({
+            errorText: `This email address is not valid`,
+            error: true
+        })
+    }
+
+    else if(number.split("")[0]!== "+"){
+            this.setState({
+                errorText: `Number should start with + sign`,
+                error: true
+            })
+    }
+    //Validate only 10 digits format. Without symbols
+    else if(!number.match(/^\d{10}/)){
+        this.setState({
+            errorText: `Number does not match format`,
+            error: true
+        })
+}
+
+    else{
+        this.setState({
+            errorText: '',
+            error: false
+        })
+    }
+}
+
+    submit(evt){
+        evt.preventDefault();
+        this.validateForm(this.state.fullname, this.state.email,this.state.number);    
     }
     render() {
-        return (
-            
+        const errorShow = this.state.error ? 'block' : 'none';
+        return ( 
             <Container id="contact" className="join-container">
                 <Row className="join-wrap">
                     <Col lg={8} md={12}  className="join-left">
@@ -31,14 +109,16 @@ class JoinUs extends Component {
                            <br/>
                            <p>Lorem ipsum dolor sit.</p>
                            <br/>
-                           <div className="join-form">
-                                <input type="text" name="name" id="name" placeholder="Your Full Name"/>
-                                <input type="email" name="email" id="email" placeholder="Your Email"/>
-                                <input type="text" name="number" id="number" placeholder="Your Phone Number"/>
+                           <div style={{display: errorShow}} className="error">{this.state.errorText}</div>
+                           <form onSubmit={this.submit} className="join-form">
+                                <input type="text" onChange={this.change} value={this.state.fullname} name="fullname" id="name" placeholder="Your Full Name"/>
+                                <input type="email" onChange={this.change}  value={this.state.email} name="email" id="email" placeholder="Your Email"/>
+                                <input type="text" onChange={this.change} value={this.state.number } name="number" id="number" placeholder="Your Phone Number"/>
+                                <div className="join-btn">
+                                <button>Send Information </button>   
                             </div>
-                            <div className="join-btn">
-                                <a href="#">Send Information</a>    
-                            </div>
+                            </form>
+                            
                             
                         </div>
                     </Col>

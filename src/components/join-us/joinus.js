@@ -75,6 +75,11 @@ class JoinUs extends Component {
             error: false,
             correct: true
         })
+        setTimeout(()=>{
+            this.setState({
+                correct:false
+            })
+        },3000)
     }
 }
 

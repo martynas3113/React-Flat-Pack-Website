@@ -3,13 +3,15 @@
     background-color: rgb(89, 163, 252);
     background-repeat: no-repeat;
     background-size: cover;
-    height: calc(100vh - 74px);
+    min-height: calc(100vh - 74px);
     background-position: 5%;
-    
 }
 
 .hero-wrap{
-    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 30px;
+    
 }
 
 .hero-content {
@@ -19,7 +21,7 @@
     
 }
     .hero-content > .title {
-        padding-top: 300px;
+        padding-top: 20%;
         color: white;
         text-transform: uppercase;
         font-family: Arial, Helvetica, sans-serif;
@@ -62,3 +64,12 @@
             background-color: white;
             color:rgb(89, 163, 252);
         }
+
+@media (max-width: 568px){
+    .hero-container {
+        background-position: 30%;
+    }
+    /* .hero-content > .title {
+        padding-top: 10%;
+    } */
+}

@@ -1,6 +1,7 @@
 ## React Flat Pack website
 
 Page is created using React.js for educational purposes. <br>
+
 <b>Features:</b>
 - Fully responsive design
 - Hamburger menu on resize

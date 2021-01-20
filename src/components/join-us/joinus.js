@@ -9,6 +9,7 @@ class JoinUs extends Component {
     constructor(props){
         super(props)
         this.state ={
+            correct: false,
             error: false,
             errorText : '',
             features:[feature,feature2,feature3],
@@ -27,7 +28,7 @@ class JoinUs extends Component {
     }
 
     validateForm(name,email,number){
-        const emailValid = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+[^<>()\.,;:\s@\"]{2,})$/;
+        const emailValid = /^(([^<>()[\].,;:\s@"]+(.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>().,;\s@"]+.{0,1})+[^<>().,;:\s@"]{2,})$/;
         
         const nameString = name.split("");
     const nameLength = name.split("").length;
@@ -61,24 +62,18 @@ class JoinUs extends Component {
         })
     }
 
-    else if(number.split("")[0]!== "+"){
-            this.setState({
-                errorText: `Number should start with + sign`,
-                error: true
-            })
-    }
     //Validate only 10 digits format. Without symbols
     else if(!number.match(/^\d{10}/)){
         this.setState({
-            errorText: `Number does not match format`,
+            errorText: `Number does not match 10 digits format`,
             error: true
         })
 }
 
     else{
         this.setState({
-            errorText: '',
-            error: false
+            error: false,
+            correct: true
         })
     }
 }
@@ -88,6 +83,7 @@ class JoinUs extends Component {
         this.validateForm(this.state.fullname, this.state.email,this.state.number);    
     }
     render() {
+        const correctShow =  this.state.correct ? 'block' : 'none';
         const errorShow = this.state.error ? 'block' : 'none';
         return ( 
             <Container id="contact" className="join-container">
@@ -109,6 +105,7 @@ class JoinUs extends Component {
                            <br/>
                            <p>Lorem ipsum dolor sit.</p>
                            <br/>
+                           <div style={{display: correctShow}} className="correct">Sending form...</div>
                            <div style={{display: errorShow}} className="error">{this.state.errorText}</div>
                            <form onSubmit={this.submit} className="join-form">
                                 <input type="text" onChange={this.change} value={this.state.fullname} name="fullname" id="name" placeholder="Your Full Name"/>
